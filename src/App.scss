@@ -1,0 +1,149 @@
+.App {
+    text-align: center;
+    background-color: #2c3e50;
+    min-height: 100vh;
+    height: 100%;
+}
+
+h1 {
+    margin-top: 0px;
+    color: #bdc3c7;
+}
+
+.add-task > form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 30vw;
+}
+
+form > input {
+    height: 3vh;
+    background-color: #2980b9;
+    border:none;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ecf0f1;
+    border-radius: 5px;
+}
+
+form > button {
+    border-radius: 5px;
+    border: none;
+    background: #e67e22;
+    color: #ecf0f1;
+    box-shadow: 1px 1px 4px #333;
+    cursor: pointer;
+    width: 100%;
+    height: 25px;
+    margin: auto;
+}
+
+ul {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 0px;
+  }
+  
+  li {
+    list-style: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #2980b9;
+    width: 30vw;
+    height: 4vh;
+    margin: 5px 0px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  li > p {
+    flex-grow: 2;
+    color: #ecf0f1;
+    margin: auto;
+  }
+  
+  li > input {
+    flex-grow: 0;
+  }
+
+.delete-button {
+    border-radius: 2px;
+    border: none;
+    background: #e67e22;
+    color: #ebd9c8;
+    box-shadow: 1px 1px 4px #333;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;    
+    -webkit-appearance: none;
+  }
+
+  input[type=checkbox] {
+    visibility: hidden;
+}
+  
+  .checkbox {
+    width: 30px;
+    height: 30px;
+    background: #ddd;
+    margin: auto;
+    border-radius: 100%;
+    position: relative;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .checkbox label {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    background: #333;
+    box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+  }
+
+  .checkbox input[type=checkbox]:checked + label {
+    background: #26ca28;
+  }
+  
+  .tasks {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  @media only screen and (max-width: 750px) {
+   
+    li {
+      width: 90vw;
+      height: 6vh;
+    }
+
+    .add-task > form {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 90vw;
+    }
+
+    form > input, select:focus {
+        height: 5vh;
+        font-size: 16px;
+    }
+    
+    form > button {
+        height: 6vh;
+    }
+    
+  }
